@@ -28,11 +28,12 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@contextdao/context": "^1.0.4",
     "gluegun": "latest"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
-    "@types/node": "^12.7.11",
+    "@types/node": "^12.20.55",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "copyfiles": "^2.4.1",

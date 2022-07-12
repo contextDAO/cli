@@ -1,7 +1,15 @@
 import { GluegunToolbox } from 'gluegun'
+import {
+  initContext,
+  DappContext,
+  Network,
+  connectWallet,
+  openWallet,
+} from '@contextdao/context'
 
 interface Config {
   network: string
+  wallet: string
   registry: string
 }
 
@@ -13,7 +21,7 @@ interface Config {
  */
 function getHome(toolbox: GluegunToolbox): string {
   const sep = toolbox.filesystem.separator
-  const home = `${toolbox.filesystem.homedir()}${sep}.context{sep}`
+  const home = `${toolbox.filesystem.homedir()}${sep}.context${sep}`
   return home
 }
 
@@ -22,20 +30,24 @@ function getHome(toolbox: GluegunToolbox): string {
 module.exports = (toolbox: GluegunToolbox) => {
   // toolbox.config = () => {
   toolbox.config = {
-    saveConfig: async (network: string, registry: string) => {
+    saveConfig: async (network: string, wallet: string, registry: string) => {
       const home = getHome(toolbox)
-      const config: Config = { network, registry }
+      const config: Config = { network, wallet, registry }
       toolbox.filesystem.write(`${home}config.json`, config)
-      // toolbox.filesystem.write(`${home}wallet.json`, wallets.evmWallet)
       toolbox.print.info('Setup Saved')
     },
+    loadConfig: async (): Promise<DappContext> => {
+      const home = getHome(toolbox)
+      const strConfig = toolbox.filesystem.read(`${home}config.json`)
+      if (!strConfig) {
+        toolbox.print.error('No config file found. Run "ctx setup"')
+        process.exit(1)
+      }
+      const config: Config = JSON.parse(strConfig)
+      const network = config.network as Network
+      const context = await initContext({ network })
+      await connectWallet(context, openWallet(config.wallet))
+      return context
+    },
   }
-
-  // enable this if you want to read configuration in from
-  // the current folder's package.json (in a "ctx" property),
-  // ctx.config.json, etc.
-  // toolbox.config = {
-  //   ...toolbox.config,
-  //   ...toolbox.config.loadConfig("ctx", process.cwd())
-  // }
 }
