@@ -290,10 +290,10 @@
     "exec-sh" "^0.3.2"
     "minimist" "^1.2.0"
 
-"@contextdao/context@^1.0.6":
-  "integrity" "sha512-xbwWwexSk655aWXClAEJJkLgIxsGMi3FB/zDsjuoPLii5UKaPIWR2fgsWusEIAnAQGrOR2SX5GpQ9g2olM5jKg=="
-  "resolved" "https://registry.npmjs.org/@contextdao/context/-/context-1.0.6.tgz"
-  "version" "1.0.6"
+"@contextdao/context@^1.0.5":
+  "integrity" "sha512-X9kWLG/Og+bF+tly8x24hLrtcGv2ljnDNgRFK2RJQd8Rq6se6pnV4A58miPbsNgUCqW0txIsAuzIdAopGJVz7Q=="
+  "resolved" "https://registry.npmjs.org/@contextdao/context/-/context-1.0.5.tgz"
+  "version" "1.0.5"
   dependencies:
     "arweave" "^1.10.23"
     "redstone-smartweave" "^0.5.7"
@@ -2534,11 +2534,6 @@
   "integrity" "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
-
-"fsevents@^2.1.2", "fsevents@~2.3.1":
-  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
-  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
-  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
