@@ -7,8 +7,10 @@ const command: GluegunCommand = {
     const { print } = toolbox
     const context: DappContext = await toolbox.config.loadConfig()
     print.info(`Get Balance`)
+    // @ts-ignore
     const state = await getBalance(context)
     print.highlight(`Balance`)
+    print.info(state)
   },
 }
 
