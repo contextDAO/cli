@@ -290,10 +290,10 @@
     "exec-sh" "^0.3.2"
     "minimist" "^1.2.0"
 
-"@contextdao/context@^1.0.4":
-  "integrity" "sha512-lKhZXrmr/luGE0NjIRsldre7LyFWOZYTcWRzZ99Vm0Ir/Du9rBUDu6mz2C9mPk5pyHv3t86JSw3vG3naUuX1kw=="
-  "resolved" "https://registry.npmjs.org/@contextdao/context/-/context-1.0.4.tgz"
-  "version" "1.0.4"
+"@contextdao/context@^1.0.5":
+  "integrity" "sha512-X9kWLG/Og+bF+tly8x24hLrtcGv2ljnDNgRFK2RJQd8Rq6se6pnV4A58miPbsNgUCqW0txIsAuzIdAopGJVz7Q=="
+  "resolved" "https://registry.npmjs.org/@contextdao/context/-/context-1.0.5.tgz"
+  "version" "1.0.5"
   dependencies:
     "arweave" "^1.10.23"
     "redstone-smartweave" "^0.5.7"

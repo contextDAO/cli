@@ -3,7 +3,6 @@ import {
   initContext,
   DappContext,
   Network,
-  connectWallet,
   openWallet,
 } from '@contextdao/context'
 
@@ -45,8 +44,12 @@ module.exports = (toolbox: GluegunToolbox) => {
       }
       const config: Config = JSON.parse(strConfig)
       const network = config.network as Network
-      const context = await initContext({ network })
-      await connectWallet(context, openWallet(config.wallet))
+      const context = await initContext({
+        network,
+        wallet: openWallet(config.wallet),
+        address: config.registry,
+      })
+      // await connectWallet(context, openWallet(config.wallet))
       return context
     },
   }

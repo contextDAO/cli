@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@contextdao/context": "^1.0.4",
+    "@contextdao/context": "^1.0.5",
     "gluegun": "latest"
   },
   "devDependencies": {

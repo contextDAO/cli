@@ -8,7 +8,6 @@ const command: GluegunCommand = {
     const { print } = toolbox
     const context: DappContext = await toolbox.config.loadConfig()
     print.info(`Create a Schema`)
-    console.log(context)
     await createSchema(context, `Human`, humanState)
   },
 }
