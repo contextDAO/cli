@@ -1,7 +1,6 @@
 import { SchemaState, Proposal, Release } from '@contextdao/context'
 
 export const humanState: SchemaState = {
-  schemaId: `Human`,
   releaseId: 0,
   contributors: [
     {
